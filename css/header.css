@@ -109,3 +109,25 @@
 .page-header {
   border-bottom: 1px solid #e7e9fc;
 }
+
+.nav a {
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 65px;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.nav a:hover::after,
+.nav a:focus::after {
+  opacity: 1;
+}
