@@ -22,15 +22,59 @@
   list-style: none;
 }
 
-.portfolio-list li {
+/* Карточка целиком */
+.portfolio-card {
   width: 360px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list img {
+.portfolio-card:hover {
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+/* Изображение и его обёртка */
+.portfolio-card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card-image img {
   display: block;
   width: 100%;
   height: 300px;
   object-fit: cover;
+}
+
+/* Синий оверлей */
+.portfolio-card-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .portfolio-card-content-overlay {
+  transform: translateY(0);
+}
+
+/* Нижняя часть карточки */
+.portfolio-card-content {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio-card-title {
@@ -50,43 +94,4 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  position: relative;
-}
-
-.portfolio-card-content {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
-}
-
-.portfolio-list li {
-  width: 360px;
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-card-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-card-content-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px 32px;
-  color: #f4f4fd;
-  background-color: #4d5ae5;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-list li:hover .portfolio-card-content-overlay {
-  transform: translateY(0);
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }

@@ -6,7 +6,6 @@
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 8px;
 }
 
 .features-text {
@@ -42,4 +41,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8px;
 }
